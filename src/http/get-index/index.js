@@ -5,8 +5,9 @@ let getURL = require('./get-web-socket-url')
 /**
  * renders the html app chrome
  */
-exports.handler = async function http(req) {
-  return {
+
+function handler (request, res) {
+  res({
     headers: {'content-type': 'text/html; charset=utf8'},
     body: `<!doctype html>
 <html>
@@ -20,5 +21,7 @@ window.WS_URL = '${getURL()}'
 <script type=module src=${static('/index.mjs')}></script>
 </body>
 </html>`
-  }
+  })
 }
+
+exports.handler = arc.http(handler)

@@ -1,7 +1,7 @@
 {
   "name": "test-ws-ws-default",
   "dependencies": {
-    "@architect/functions": "^3.7.6",
-    "aws-sdk": "^2.643.0"
+    "@architect/functions": "^3.13.8",
+    "aws-sdk": "^2.799.0"
   }
 }
